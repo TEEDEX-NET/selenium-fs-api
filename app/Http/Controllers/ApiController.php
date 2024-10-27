@@ -33,7 +33,7 @@ class ApiController extends Controller
         $allowedIps = explode(',', config('app.allow_ips'));
         // Get client IP address
         $clientIp = $request->ip();
-
+	dd($allowedIps);
         // Check if the client IP is in the allowed list
         if (! in_array($clientIp, $allowedIps)) {
             return response()->json(['error' => 'Access denied from this IP address'], 403);
