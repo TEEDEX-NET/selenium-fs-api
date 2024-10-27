@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Selenium FS API'),
 
     /*
     |--------------------------------------------------------------------------
@@ -83,6 +83,8 @@ return [
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
+
+    'allow_ips' => env('ALLOW_IPS', '127.0.0.1,localhost'),
 
     /*
     |--------------------------------------------------------------------------
