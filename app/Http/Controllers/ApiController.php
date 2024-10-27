@@ -30,7 +30,7 @@ class ApiController extends Controller
      */
     public function uploadImage(Request $request)
     {
-        $allowedIps = config('app.allow_ips');
+        $allowedIps = explode(',', config('app.allow_ips'));
         // Get client IP address
         $clientIp = $request->ip();
 
