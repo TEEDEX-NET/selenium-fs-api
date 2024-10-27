@@ -58,7 +58,7 @@ class ApiController extends Controller
         //$path = $file->storeAs('private', $filename);
         // Store the file on the private disk
         //$path = Storage::disk('private')->putFileAs('', $file, $fileName);
-        $path = Storage::disk('private')->put("upload-images/{$filename}", file_get_contents($file));
+        $path = Storage::disk('local')->put("upload-images/{$filename}", file_get_contents($file));
 
         // Get the full local path of the saved file
         $localPath = storage_path('app/' . "private/upload-images/{$filename}");
